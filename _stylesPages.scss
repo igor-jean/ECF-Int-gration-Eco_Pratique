@@ -1,0 +1,119 @@
+// ACCUEIL
+.accueil {
+    h1 {
+        margin: 30px auto 50px;
+        text-align: center;
+        margin-bottom: 50px;
+
+        &::first-letter {
+            text-transform: uppercase;
+        }
+
+        @media screen and (max-width: 576px) {
+            margin: 0px auto 30px;
+
+        }
+    }
+
+    p {
+        text-align: center;
+    }
+
+    #parallaxAccueil {
+        margin: 50px 0;
+        background: fixed no-repeat center/cover url(img/tree.jpg);
+        height: 300px;
+        width: 100%;
+
+        @media screen and (max-width: 576px) {
+            height: 250px;
+            background: scroll no-repeat center/cover url(img/tree.jpg);
+        }
+    }
+
+    .sectionPicto {
+        height: 250px;
+
+        @media screen and (max-width: 576px) {
+            height: 600px;
+            display: flex;
+        }
+
+        .flex {
+            justify-content: space-between;
+
+            @media screen and (max-width: 576px) {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
+
+
+            .picto {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+
+                i {
+                    font-size: 7rem;
+                    color: $colorLightGreen;
+                }
+
+
+                span {
+                    font-weight: 700;
+                    margin-top: 10px;
+
+                    &::first-letter {
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// PAGE ECONOMIE ENERGIE
+#economie {
+    li {
+        p {
+            line-height: normal;
+        }
+    }
+}
+
+// PAGE CONTACT
+form {
+    font-size: 1.3rem;
+
+    .groupForm {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 25px;
+        gap: 10px;
+
+        input {
+            width: 100%;
+            height: 30px;
+            border: none;
+            background: rgb(180, 180, 180);
+            color: $colorBlack;
+        }
+
+        textarea {
+            border: none;
+            background: rgb(180, 180, 180);
+
+        }
+    }
+
+    input[type=submit] {
+        background: $colorDarkGreen;
+        color: white;
+        padding: 7px 25px;
+        border: none;
+        cursor: pointer;
+    }
+}

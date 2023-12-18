@@ -1,0 +1,280 @@
+$colorBlack: #3e3e3e;
+$colorLightGreen: #709700;
+$colorDarkGreen: #136731;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: $colorBlack;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 778px) {
+        width: 90%;
+    }
+}
+
+main {
+    padding: 80px 0 50px;
+
+    @media screen and (max-width: 576px) {
+        padding-top: 230px;
+    }
+
+    img {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    p {
+        text-align: start;
+        line-height: 25px;
+        margin: 15px 0;
+    }
+
+    li {
+        list-style: disc;
+        margin-left: 40px;
+
+        p {
+            letter-spacing: 0;
+        }
+    }
+}
+
+h1 {
+    margin: 0px 0 50px;
+    color: #136731;
+    font-size: 3rem;
+    font-weight: normal;
+    width: 80%;
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
+
+    @media screen and (max-width: 992px) {
+        font-size: 2rem;
+    }
+
+    @media screen and (max-width: 576px) {
+        width: 100%;
+    }
+}
+
+p {
+    color: $colorBlack;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 35px;
+    letter-spacing: 1px;
+}
+
+.flex {
+    display: flex;
+}
+
+
+.lien {
+    a {
+        color: #136731;
+    }
+}
+
+section {
+    padding: 20px;
+    padding-top: 0;
+}
+
+// GRID 70% / 30%
+.grid7030 {
+    display: grid;
+    grid-template-columns: 70% 30%;
+
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
+
+}
+
+// SIDEBAR
+aside {
+    border-left: 1px solid $colorBlack;
+    padding-left: 20px;
+
+    @media screen and (max-width: 768px) {
+        border-left: none;
+    }
+
+    h2 {
+        color: $colorDarkGreen;
+        font-weight: normal;
+        padding: 0 0 10px 0;
+
+        @media screen and (max-width: 768px) {
+            margin-top: 20px;
+        }
+    }
+
+    a {
+        color: $colorBlack;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.7rem;
+        margin: 50px auto;
+        display: block;
+
+        @media screen and (max-width: 768px) {
+            margin: 40px auto;
+            font-size: 1rem;
+        }
+    }
+}
+
+// HEADER
+header {
+    height: 350px;
+    background: scroll no-repeat url(img/background-header.jpg);
+    background-size: 100%;
+    background-position: top 35% left 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    @media screen and (max-width: 1300px) {
+        height: 300px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        height: 150px;
+    }
+
+    @media screen and (max-width: 600px) {
+        background: scroll no-repeat center/cover url(img/background-header.jpg);
+    }
+
+    #logo {
+        width: 300px;
+
+        @media screen and (max-width: 1000px) {
+            width: 150px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    nav {
+        position: absolute;
+        transform: translateY(100%);
+        bottom: 0;
+        background: $colorDarkGreen;
+        width: 100%;
+
+        ul {
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @media screen and (max-width: 576px) {
+                flex-direction: column;
+            }
+
+
+            li {
+                list-style: none;
+
+                &::first-letter {
+                    text-transform: uppercase;
+                }
+
+
+                a {
+                    padding: 10px 20px;
+                    display: block;
+                    color: white;
+                    font-weight: 700;
+                    text-decoration: none;
+                }
+
+                &:hover {
+                    background: $colorLightGreen;
+                }
+            }
+        }
+    }
+
+}
+
+// FOOTER
+footer {
+    background: $colorDarkGreen;
+    color: white;
+    padding: 15px;
+
+    .flex {
+        justify-content: space-between;
+
+        @media screen and (max-width: 576px) {
+            flex-direction: column;
+        }
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    li {
+        list-style: none;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-weight: normal;
+        margin: 10px 0;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        color: white;
+    }
+
+    #end {
+        display: flex;
+        justify-content: end;
+        gap: 10px;
+        font-size: 1.8rem;
+
+        i {
+            color: white;
+        }
+
+        @media screen and (max-width: 576px) {
+            justify-content: start;
+        }
+    }
+}
+
+// FANCYBOX
+.fancy {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
