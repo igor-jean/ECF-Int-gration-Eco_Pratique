@@ -100,12 +100,14 @@ form {
             border: none;
             background: rgb(180, 180, 180);
             color: $colorBlack;
+            padding-left: 10px;
         }
 
         textarea {
             border: none;
             background: rgb(180, 180, 180);
-
+            padding: 10px;
+            resize: none;
         }
     }
 

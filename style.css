@@ -342,10 +342,13 @@ form .groupForm input {
   border: none;
   background: rgb(180, 180, 180);
   color: #3e3e3e;
+  padding-left: 10px;
 }
 form .groupForm textarea {
   border: none;
   background: rgb(180, 180, 180);
+  padding: 10px;
+  resize: none;
 }
 form input[type=submit] {
   background: #136731;
